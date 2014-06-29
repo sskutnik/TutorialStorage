@@ -2,9 +2,9 @@
 
 #include "stub_facility.h"
 
+#include "agent_tests.h"
 #include "context.h"
 #include "facility_tests.h"
-#include "agent_tests.h"
 
 using stubs::StubFacility;
 
@@ -60,7 +60,7 @@ cyclus::Agent* StubFacilityConstructor(cyclus::Context* ctx) {
 int ConnectAgentTests();
 static int cyclus_agent_tests_connected = ConnectAgentTests();
 #define CYCLUS_AGENT_TESTS_CONNECTED cyclus_agent_tests_connected
-#endif // CYCLUS_AGENT_TESTS_CONNECTED
+#endif  // CYCLUS_AGENT_TESTS_CONNECTED
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 INSTANTIATE_TEST_CASE_P(StubFac, FacilityTests,

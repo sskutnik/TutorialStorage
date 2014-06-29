@@ -1,5 +1,5 @@
-#ifndef CYCLUS_STUBS_STUB_INST_H_
-#define CYCLUS_STUBS_STUB_INST_H_
+#ifndef CYCLSTUB_SRC_STUB_INST_H_
+#define CYCLSTUB_SRC_STUB_INST_H_
 
 #include <string>
 
@@ -34,17 +34,17 @@ class StubInst : public cyclus::Institution {
  public:
   /// Constructor for StubInst Class
   /// @param ctx the cyclus context for access to simulation-wide parameters
-  explicit  StubInst(cyclus::Context* ctx);
+  explicit StubInst(cyclus::Context* ctx);
 
   /// every agent should be destructable
   virtual ~StubInst();
-  
+
   /// The Prime Directive
   /// Generates code that handles all input file reading and restart operations
   /// (e.g., reading from the database, instantiating a new object, etc.).
   /// @warning The Prime Directive must have a space before it! (A fix will be
   /// in 2.0 ^TM)
-  
+
   #pragma cyclus
 
   #pragma cyclus note {"doc": "A stub institution is provided as a " \
@@ -59,4 +59,4 @@ class StubInst : public cyclus::Institution {
 
 }  // namespace stubs
 
-#endif  // CYCLUS_STUBS_STUB_INST_H_
+#endif  // CYCLSTUB_SRC_STUB_INST_H_

@@ -1,5 +1,5 @@
-#ifndef CYCLUS_STUBS_STUB_REGION_H_
-#define CYCLUS_STUBS_STUB_REGION_H_
+#ifndef CYCSTUB_SRC_STUB_REGION_H_
+#define CYCSTUB_SRC_STUB_REGION_H_
 
 #include <string>
 
@@ -44,7 +44,7 @@ class StubRegion : public cyclus::Region {
   /// (e.g., reading from the database, instantiating a new object, etc.).
   /// @warning The Prime Directive must have a space before it! (A fix will be
   /// in 2.0 ^TM)
-  
+
   #pragma cyclus
 
   #pragma cyclus note {"doc": "A stub region is provided as a skeleton " \
@@ -58,4 +58,4 @@ class StubRegion : public cyclus::Region {
 
 }  // namespace stubs
 
-#endif  // CYCLUS_STUBS_STUB_REGION_H_
+#endif  // CYCSTUB_SRC_STUB_REGION_H_

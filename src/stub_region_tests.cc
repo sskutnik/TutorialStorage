@@ -22,8 +22,7 @@ class StubRegionTest : public ::testing::Test {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 TEST_F(StubRegionTest, clone) {
-  StubRegion* cloned_fac =
-      dynamic_cast<StubRegion*> (src_region_->Clone());
+  StubRegion* cloned_fac = dynamic_cast<StubRegion*> (src_region_->Clone());
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -59,7 +58,7 @@ cyclus::Agent* StubRegionConstructor(cyclus::Context* ctx) {
 int ConnectAgentTests();
 static int cyclus_agent_tests_connected = ConnectAgentTests();
 #define CYCLUS_AGENT_TESTS_CONNECTED cyclus_agent_tests_connected
-#endif // CYCLUS_AGENT_TESTS_CONNECTED
+#endif  // CYCLUS_AGENT_TESTS_CONNECTED
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 INSTANTIATE_TEST_CASE_P(StubRegion, RegionTests,
