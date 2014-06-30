@@ -1,12 +1,11 @@
-#ifndef CYCLUS_STUBS_STUB_FACILITY_H_
-#define CYCLUS_STUBS_STUB_FACILITY_H_
+#ifndef CYCSTUB_SRC_STUB_FACILITY_H_
+#define CYCSTUB_SRC_STUB_FACILITY_H_
 
 #include <string>
 
 #include "cyclus.h"
 
 namespace stubs {
-
 
 /// @class StubFacility
 ///
@@ -32,7 +31,7 @@ namespace stubs {
 /// describing the behavior at the tick and tock as well as the behavior
 /// upon sending and receiving materials and messages.
 class StubFacility : public cyclus::Facility  {
- public:  
+ public:
   /// Constructor for StubFacility Class
   /// @param ctx the cyclus context for access to simulation-wide parameters
   explicit StubFacility(cyclus::Context* ctx);
@@ -42,7 +41,7 @@ class StubFacility : public cyclus::Facility  {
   /// (e.g., reading from the database, instantiating a new object, etc.).
   /// @warning The Prime Directive must have a space before it! (A fix will be
   /// in 2.0 ^TM)
-  
+
   #pragma cyclus
 
   #pragma cyclus note {"doc": "A stub facility is provided as a skeleton " \
@@ -50,9 +49,9 @@ class StubFacility : public cyclus::Facility  {
 
   /// A verbose printer for the StubFacility
   virtual std::string str();
-  
+
   /// The handleTick function specific to the StubFacility.
-  /// @param time the time of the tick  
+  /// @param time the time of the tick
   virtual void Tick();
 
   /// The handleTick function specific to the StubFacility.
@@ -64,4 +63,4 @@ class StubFacility : public cyclus::Facility  {
 
 }  // namespace stubs
 
-#endif  // CYCLUS_STUBS_STUB_FACILITY_H_
+#endif  // CYCSTUB_SRC_STUB_FACILITY_H_
