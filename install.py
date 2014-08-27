@@ -51,6 +51,8 @@ def install(args):
                           absexpanduser(args.cmake_prefix_path)]
         if args.coin_root:
             cmake_cmd += ['-DCOIN_ROOT_DIR=' + absexpanduser(args.coin_root)]
+        if args.cyclus_root:
+            cmake_cmd += ['-DCYCLUS_ROOT_DIR='+absexpanduser(args.cyclus_root)]
         if args.boost_root:
             cmake_cmd += ['-DBOOST_ROOT=' + absexpanduser(args.boost_root)]
         if args.build_type:
@@ -111,6 +113,9 @@ def main():
 
     coin = "the relative path to the Coin-OR libraries directory"
     parser.add_argument('--coin_root', help=coin)
+
+    cyclus = "the relative path to Cyclus installation directory"
+    parser.add_argument('--cyclus_root',help=cyclus, default=localdir)
 
     boost = "the relative path to the Boost libraries directory"
     parser.add_argument('--boost_root', help=boost)
