@@ -1,5 +1,5 @@
-#ifndef CYCSTUB_SRC_STUB_REGION_H_
-#define CYCSTUB_SRC_STUB_REGION_H_
+#ifndef CYCLUS_STUBS_STUB_REGION_H_
+#define CYCLUS_STUBS_STUB_REGION_H_
 
 #include <string>
 
@@ -36,7 +36,7 @@ class StubRegion : public cyclus::Region {
   /// @param ctx the cyclus context for access to simulation-wide parameters
   explicit StubRegion(cyclus::Context* ctx);
 
-  /// every agent should be destructable
+  /// Every agent should be destructable
   virtual ~StubRegion();
 
   /// The Prime Directive
@@ -53,9 +53,9 @@ class StubRegion : public cyclus::Region {
   /// A verbose printer for the StubRegion
   virtual std::string str();
 
-  // and away we go!
+  // And away we go!
 };
 
 }  // namespace stubs
 
-#endif  // CYCSTUB_SRC_STUB_REGION_H_
+#endif  // CYCLUS_STUBS_STUB_REGION_H_

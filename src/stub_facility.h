@@ -1,5 +1,5 @@
-#ifndef CYCSTUB_SRC_STUB_FACILITY_H_
-#define CYCSTUB_SRC_STUB_FACILITY_H_
+#ifndef CYCLUS_STUBS_STUB_FACILITY_H_
+#define CYCLUS_STUBS_STUB_FACILITY_H_
 
 #include <string>
 
@@ -58,9 +58,9 @@ class StubFacility : public cyclus::Facility  {
   /// @param time the time of the tock
   virtual void Tock();
 
-  // and away we go!
+  // And away we go!
 };
 
 }  // namespace stubs
 
-#endif  // CYCSTUB_SRC_STUB_FACILITY_H_
+#endif  // CYCLUS_STUBS_STUB_FACILITY_H_

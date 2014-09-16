@@ -1,5 +1,5 @@
-#ifndef CYCLSTUB_SRC_STUB_INST_H_
-#define CYCLSTUB_SRC_STUB_INST_H_
+#ifndef CYCLUS_STUBS_STUB_INST_H_
+#define CYCLUS_STUBS_STUB_INST_H_
 
 #include <string>
 
@@ -34,9 +34,9 @@ class StubInst : public cyclus::Institution {
  public:
   /// Constructor for StubInst Class
   /// @param ctx the cyclus context for access to simulation-wide parameters
-  explicit StubInst(cyclus::Context* ctx);
+  explicit  StubInst(cyclus::Context* ctx);
 
-  /// every agent should be destructable
+  /// Every agent should be destructable
   virtual ~StubInst();
 
   /// The Prime Directive
@@ -51,12 +51,12 @@ class StubInst : public cyclus::Institution {
                               "skeleton for the design of new " \
                               "institution agents."}
 
-  /// every agent should be able to print a verbose description
+  /// Every agent should be able to print a verbose description
   virtual std::string str();
 
-  // and away we go!
+  // And away we go!
 };
 
 }  // namespace stubs
 
-#endif  // CYCLSTUB_SRC_STUB_INST_H_
+#endif  // CYCLUS_STUBS_STUB_INST_H_

@@ -55,7 +55,7 @@ cyclus::Agent* StubFacilityConstructor(cyclus::Context* ctx) {
   return new StubFacility(ctx);
 }
 
-// required to get functionality in cyclus agent unit tests library
+// Required to get functionality in cyclus agent unit tests library
 #ifndef CYCLUS_AGENT_TESTS_CONNECTED
 int ConnectAgentTests();
 static int cyclus_agent_tests_connected = ConnectAgentTests();
