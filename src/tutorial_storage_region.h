@@ -1,19 +1,19 @@
-#ifndef CYCLUS_STUBS_STUB_INST_H_
-#define CYCLUS_STUBS_STUB_INST_H_
+#ifndef CYCLUS_TUTORIAL_STORAGES_TUTORIAL_STORAGE_REGION_H_
+#define CYCLUS_TUTORIAL_STORAGES_TUTORIAL_STORAGE_REGION_H_
 
 #include <string>
 
 #include "cyclus.h"
 
-namespace stubs {
+namespace tutorial_storage {
 
-/// @class StubInst
+/// @class Tutorial_storageRegion
 ///
-/// This Institution is intended as a skeleton to guide the implementation of
-/// new Institution agents.
+/// This Region is intended
+/// as a skeleton to guide the implementation of new Region agents.
 ///
-/// The StubInst class inherits from the Institution class and is dynamically
-/// loaded by the Agent class when requested.
+/// The Tutorial_storageRegion class inherits from the Region class and is
+/// dynamically loaded by the Agent class when requested.
 ///
 /// @section intro Introduction
 /// Place an introduction to the agent here.
@@ -30,14 +30,14 @@ namespace stubs {
 /// Place a description of the detailed behavior of the agent. Consider
 /// describing the behavior at the tick and tock as well as the behavior
 /// upon sending and receiving materials and messages.
-class StubInst : public cyclus::Institution {
+class Tutorial_storageRegion : public cyclus::Region {
  public:
-  /// Constructor for StubInst Class
+  /// Constructor for Tutorial_storageRegion Class
   /// @param ctx the cyclus context for access to simulation-wide parameters
-  explicit  StubInst(cyclus::Context* ctx);
+  explicit Tutorial_storageRegion(cyclus::Context* ctx);
 
   /// Every agent should be destructable
-  virtual ~StubInst();
+  virtual ~Tutorial_storageRegion();
 
   /// The Prime Directive
   /// Generates code that handles all input file reading and restart operations
@@ -47,16 +47,15 @@ class StubInst : public cyclus::Institution {
 
   #pragma cyclus
 
-  #pragma cyclus note {"doc": "A stub institution is provided as a " \
-                              "skeleton for the design of new " \
-                              "institution agents."}
+  #pragma cyclus note {"doc": "A tutorial_storage region is provided as a skeleton " \
+                              "for the design of new region agents."}
 
-  /// Every agent should be able to print a verbose description
+  /// A verbose printer for the Tutorial_storageRegion
   virtual std::string str();
 
   // And away we go!
 };
 
-}  // namespace stubs
+}  // namespace tutorial_storage
 
-#endif  // CYCLUS_STUBS_STUB_INST_H_
+#endif  // CYCLUS_TUTORIAL_STORAGES_TUTORIAL_STORAGE_REGION_H_

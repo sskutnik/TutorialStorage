@@ -1,18 +1,18 @@
-#ifndef CYCLUS_STUBS_STUB_FACILITY_H_
-#define CYCLUS_STUBS_STUB_FACILITY_H_
+#ifndef CYCLUS_TUTORIAL_STORAGES_TUTORIAL_STORAGE_FACILITY_H_
+#define CYCLUS_TUTORIAL_STORAGES_TUTORIAL_STORAGE_FACILITY_H_
 
 #include <string>
 
 #include "cyclus.h"
 
-namespace stubs {
+namespace tutorial_storage {
 
-/// @class StubFacility
+/// @class Tutorial_storageFacility
 ///
 /// This Facility is intended
 /// as a skeleton to guide the implementation of new Facility
 /// agents.
-/// The StubFacility class inherits from the Facility class and is
+/// The Tutorial_storageFacility class inherits from the Facility class and is
 /// dynamically loaded by the Agent class when requested.
 ///
 /// @section intro Introduction
@@ -30,11 +30,11 @@ namespace stubs {
 /// Place a description of the detailed behavior of the agent. Consider
 /// describing the behavior at the tick and tock as well as the behavior
 /// upon sending and receiving materials and messages.
-class StubFacility : public cyclus::Facility  {
+class Tutorial_storageFacility : public cyclus::Facility  {
  public:
-  /// Constructor for StubFacility Class
+  /// Constructor for Tutorial_storageFacility Class
   /// @param ctx the cyclus context for access to simulation-wide parameters
-  explicit StubFacility(cyclus::Context* ctx);
+  explicit Tutorial_storageFacility(cyclus::Context* ctx);
 
   /// The Prime Directive
   /// Generates code that handles all input file reading and restart operations
@@ -44,23 +44,23 @@ class StubFacility : public cyclus::Facility  {
 
   #pragma cyclus
 
-  #pragma cyclus note {"doc": "A stub facility is provided as a skeleton " \
+  #pragma cyclus note {"doc": "A tutorial_storage facility is provided as a skeleton " \
                               "for the design of new facility agents."}
 
-  /// A verbose printer for the StubFacility
+  /// A verbose printer for the Tutorial_storageFacility
   virtual std::string str();
 
-  /// The handleTick function specific to the StubFacility.
+  /// The handleTick function specific to the Tutorial_storageFacility.
   /// @param time the time of the tick
   virtual void Tick();
 
-  /// The handleTick function specific to the StubFacility.
+  /// The handleTick function specific to the Tutorial_storageFacility.
   /// @param time the time of the tock
   virtual void Tock();
 
   // And away we go!
 };
 
-}  // namespace stubs
+}  // namespace tutorial_storage
 
-#endif  // CYCLUS_STUBS_STUB_FACILITY_H_
+#endif  // CYCLUS_TUTORIAL_STORAGES_TUTORIAL_STORAGE_FACILITY_H_
